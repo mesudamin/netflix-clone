@@ -42,10 +42,13 @@
 
 .header__nav-link {
   color: #e5e5e5;
+  font-family: 'Barlow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 0.82rem;
   font-weight: 400;
+  letter-spacing: 0.01em;
   transition: color 0.2s ease;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .header__nav-link:hover {
@@ -91,8 +94,10 @@
   border-radius: 4px;
   background: #e50914;
   color: #fff;
+  font-family: 'Barlow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
+  letter-spacing: 0.02em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,13 +111,71 @@
   transform: rotate(180deg);
 }
 
-/* ── Responsive ── */
+/* ─────────────────────────────────────────
+   RESPONSIVE — Tablet  ≤ 768px
+───────────────────────────────────────── */
 @media (max-width: 768px) {
   .header__nav {
     display: none;
   }
 
+  .header {
+    padding: 0 3%;
+    height: 60px;
+  }
+
   .header__logo {
-    font-size: 1.4rem;
+    width: 80px;
+  }
+
+  .header__right {
+    gap: 14px;
+  }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — Mobile  ≤ 480px
+───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .header {
+    padding: 0 4%;
+    height: 54px;
+  }
+
+  .header__logo {
+    width: 68px;
+  }
+
+  .header__right {
+    gap: 10px;
+  }
+
+  .header__search svg,
+  .header__notifications svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header__avatar-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.78rem;
+  }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — Small Mobile  ≤ 360px
+───────────────────────────────────────── */
+@media (max-width: 360px) {
+  .header {
+    padding: 0 3%;
+  }
+
+  .header__logo {
+    width: 60px;
+  }
+
+  .header__right {
+    gap: 8px;
   }
 }

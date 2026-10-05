@@ -3,3 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ── Global Typography ── */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Barlow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #e5e5e5;
+    background-color: #141414;
+}
+
+/* Cinematic heading style (use on h1, h2, banners) */
+.font-display {
+    font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.04em;
+}
+
+/* ── Global Responsive Utilities ── */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Safe area for notched / pill-button phones */
+@supports (padding: env(safe-area-inset-bottom)) {
+    body {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+}
